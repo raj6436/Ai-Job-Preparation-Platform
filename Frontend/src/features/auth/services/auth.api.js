@@ -13,6 +13,8 @@ export async function register({ username, email, password }) {
             username, email, password
         })
 
+        localStorage.setItem("token", response.data.token)
+
         return response.data
 
     } catch (err) {
