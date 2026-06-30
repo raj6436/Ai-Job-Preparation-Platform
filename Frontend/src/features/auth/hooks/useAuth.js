@@ -14,7 +14,7 @@ const handleLogin = async ({ email, password }) => {
     try {
         const data = await login({ email, password })
 
-        console.log("Login Response:", data)
+        console.log("Login Response:", JSON.stringify(data, null, 2))
 
         setUser(data.user)
     } catch (err) {
